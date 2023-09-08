@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Module01___Activity01.Page1">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.Resources>
+                    <Style x:Key="SubmitButton" TargetType="Button">
+                        <Setter Property="FontSize" Value="30"/>
+                        <Setter Property="BackgroundColor" Value="#EA638C"/>
+                        <Setter Property="TextColor" Value="#190E4F"/>
+                        <Setter Property="CornerRadius" Value="20"/>
+                    </Style>
+
+                    <Style x:Key="WarningButton" TargetType="Button">
+                        <Setter Property="FontSize" Value="30"/>
+                        <Setter Property="BackgroundColor" Value="#6E44FF"/>
+                        <Setter Property="TextColor" Value="#FFC2E2"/>
+                        <Setter Property="CornerRadius" Value="20"/>
+                    </Style>
+
+                </Grid.Resources>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Button Text="Go to Main Page"  Style = "{StaticResource SubmitButton}" Grid.Row="0" Clicked="OpenMainPage" />
+                <Button Text="Test Button"  Style = "{StaticResource SubmitButton}" Grid.Row="1" />
+                <Button Text="Go to Page 2" Style="{StaticResource WarningButton}" Grid.Row="2" Clicked="OpenPage2"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
